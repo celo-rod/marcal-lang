@@ -1,0 +1,35 @@
+grammar MarcalLang;
+
+FOR: 'FORCA';
+ENE: 'ENERGIA';
+DEC: 'DECISAO';
+MEN: 'MENSAGEM';
+MIS: 'MISSAO';
+CON: 'CONCLUI';
+VAZ: 'VAZIO';
+DES: 'DESTINO';
+PER: 'PERSISTE';
+SE: 'SE';
+AVA: 'AVANCA';
+REC: 'RECUA';
+COM: 'COMO';
+DRI: 'DRIVER';
+OpAtr: '=';
+OpAri: '+'|'-'|'*'|'/';
+OpRel: '<'|'<='|'>'|'>='|'=='|'!=';
+OpLog: '&&'|'||';
+OpCon: '<>';
+AP: '(';
+FP: ')';
+AC: '{';
+FC: '}';
+Id: Letra(Letra|Digito)*;
+NumI: Digito+;
+NumR: Digito+('.'Digito+);
+Str: '"'(Letra|Digito)+'"';
+Delim: '?';
+Comen: '$'(Letra|Digito)+;
+
+fragment Letra: [a-zA-Z];
+fragment Digito: [0-9];
+WS: [ \r\t\n]* ->skip;
