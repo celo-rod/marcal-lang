@@ -7,8 +7,31 @@ MISSAO FORCA fatorial (FORCA numero) {
 	}
 }
 
+MISSAO FORCA somaFibonacci (FORCA n) {
+	FORCA a = 0?
+	FORCA b = 1?
+	FORCA soma = 0?
+	FORCA i = 0?
+
+	PERSISTE (i < n) {
+		SE (i <= 1) AVANCA {
+			soma = soma + i?
+		} RECUA {
+			FORCA proximo = a + b?
+			a = b?
+			b = proximo?
+			soma = soma + proximo?
+		}
+		i = i + i?
+	}
+	CONCLUI soma?
+}
+
 MISSAO DESTINO () {
 	FORCA numero = 5?
+	FORCA n = 5?
 	FORCA resultado = fatorial(numero)?
 	DRIVER ("O fatorial de " <> numero <> " é: " <> resultado)?
+	resultado = somaFibonacci(n)?
+	DRIVER("A soma dos " <> n <> " primeiros termos é: " <> resultado)?
 }
