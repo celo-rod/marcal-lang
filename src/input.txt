@@ -1,0 +1,14 @@
+MISSAO FORCA fatorial (FORCA numero) {
+	$ comentário
+	SE (n <= 1) AVANCA {
+		CONCLUI 1?
+	} RECUA {
+		CONCLUI numero * fatorial(n - 1)?
+	}
+}
+
+MISSAO DESTINO () {
+	FORCA numero = 5?
+	FORCA resultado = fatorial(numero)?
+	DRIVER ("O fatorial de " <> numero <> " é: " <> resultado)?
+}
