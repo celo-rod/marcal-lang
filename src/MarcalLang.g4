@@ -26,10 +26,11 @@ FC: '}';
 Id: Letra(Letra|Digito)*;
 NumI: Digito+;
 NumR: Digito+('.'Digito+);
-Str: '"'(Letra|Digito)+'"';
+Str: '"'.*?'"';
 Delim: '?';
-Comen: '$'(Letra|Digito)+;
 
 fragment Letra: [a-zA-Z];
 fragment Digito: [0-9];
-WS: [ \r\t\n]* ->skip;
+WS: [ \r\t\n]* -> skip;
+Comen: '$'.*?'\r'?'\n' -> skip;
+ErrorChar: . ;
