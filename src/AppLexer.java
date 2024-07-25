@@ -1,6 +1,7 @@
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
-import org.antlr.v4.runtime.Token;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
 import java.io.IOException;
 
 public class AppLexer {
@@ -9,13 +10,10 @@ public class AppLexer {
     try {
       CharStream input = CharStreams.fromFileName(inputFileName);
       MarcalLangLexer lexer = new MarcalLangLexer(input);
-      Token token;
-      while (!lexer._hitEOF) {
-        token = lexer.nextToken();
-        System.out.println("Token: " + token.toString());
-        System.out.println("  Lexema: " + token.getText());
-        System.out.println("  Classe: " + lexer.getVocabulary().getDisplayName(token.getType()));
-      }
+      CommonTokenStream tokens = new CommonTokenStream(lexer);
+      MarcalLangParser parser = new MarcalLangParser(tokens);
+      ParseTree tree = parser.program();
+      System.out.println(tree.toStringTree(parser));
 
     } catch (IOException e) {
       System.out.println("Erro: " + e.getMessage());
