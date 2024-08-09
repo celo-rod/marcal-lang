@@ -1,4 +1,4 @@
-// Generated from MarcalLang.g4 by ANTLR 4.13.1
+// Generated from MarcalLang.g4 by ANTLR 4.13.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue", "this-escape"})
 public class MarcalLangParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.13.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -19,7 +19,7 @@ public class MarcalLangParser extends Parser {
 		T__0=1, FOR=2, ENE=3, DEC=4, MEN=5, MIS=6, CON=7, VAZ=8, DES=9, PER=10, 
 		SE=11, AVA=12, REC=13, COM=14, DRI=15, OpAtr=16, OpAri=17, OpRel=18, OpLog=19, 
 		OpCon=20, AP=21, FP=22, AC=23, FC=24, Id=25, NumI=26, NumR=27, Str=28, 
-		Delim=29, WS=30, Comen=31, ErrorChar=32;
+		Delim=29, WS=30, Comen=31;
 	public static final int
 		RULE_program = 0, RULE_declarations = 1, RULE_declaration = 2, RULE_varDeclaration = 3, 
 		RULE_funDeclaration = 4, RULE_mainFunction = 5, RULE_typeSpecifier = 6, 
@@ -56,7 +56,7 @@ public class MarcalLangParser extends Parser {
 			null, null, "FOR", "ENE", "DEC", "MEN", "MIS", "CON", "VAZ", "DES", "PER", 
 			"SE", "AVA", "REC", "COM", "DRI", "OpAtr", "OpAri", "OpRel", "OpLog", 
 			"OpCon", "AP", "FP", "AC", "FC", "Id", "NumI", "NumR", "Str", "Delim", 
-			"WS", "Comen", "ErrorChar"
+			"WS", "Comen"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -1996,26 +1996,26 @@ public class MarcalLangParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001 \u010e\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
-		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
-		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
-		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002"+
-		"\f\u0007\f\u0002\r\u0007\r\u0002\u000e\u0007\u000e\u0002\u000f\u0007\u000f"+
-		"\u0002\u0010\u0007\u0010\u0002\u0011\u0007\u0011\u0002\u0012\u0007\u0012"+
-		"\u0002\u0013\u0007\u0013\u0002\u0014\u0007\u0014\u0002\u0015\u0007\u0015"+
-		"\u0002\u0016\u0007\u0016\u0002\u0017\u0007\u0017\u0002\u0018\u0007\u0018"+
-		"\u0002\u0019\u0007\u0019\u0002\u001a\u0007\u001a\u0002\u001b\u0007\u001b"+
-		"\u0002\u001c\u0007\u001c\u0002\u001d\u0007\u001d\u0001\u0000\u0001\u0000"+
-		"\u0001\u0000\u0001\u0000\u0001\u0001\u0005\u0001B\b\u0001\n\u0001\f\u0001"+
-		"E\t\u0001\u0001\u0002\u0001\u0002\u0003\u0002I\b\u0002\u0001\u0003\u0001"+
-		"\u0003\u0001\u0003\u0001\u0003\u0003\u0003O\b\u0003\u0001\u0003\u0001"+
-		"\u0003\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0003"+
-		"\u0004X\b\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0005\u0001"+
-		"\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0006\u0001"+
-		"\u0006\u0001\u0007\u0001\u0007\u0001\u0007\u0005\u0007h\b\u0007\n\u0007"+
-		"\f\u0007k\t\u0007\u0001\b\u0001\b\u0001\b\u0001\t\u0001\t\u0005\tr\b\t"+
-		"\n\t\f\tu\t\t\u0001\t\u0001\t\u0001\n\u0001\n\u0001\n\u0001\n\u0001\n"+
-		"\u0001\n\u0001\n\u0001\n\u0003\n\u0081\b\n\u0001\u000b\u0001\u000b\u0001"+
+		"\u0004\u0001\u001f\u010e\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
+		"\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004"+
+		"\u0002\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007"+
+		"\u0002\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b"+
+		"\u0002\f\u0007\f\u0002\r\u0007\r\u0002\u000e\u0007\u000e\u0002\u000f\u0007"+
+		"\u000f\u0002\u0010\u0007\u0010\u0002\u0011\u0007\u0011\u0002\u0012\u0007"+
+		"\u0012\u0002\u0013\u0007\u0013\u0002\u0014\u0007\u0014\u0002\u0015\u0007"+
+		"\u0015\u0002\u0016\u0007\u0016\u0002\u0017\u0007\u0017\u0002\u0018\u0007"+
+		"\u0018\u0002\u0019\u0007\u0019\u0002\u001a\u0007\u001a\u0002\u001b\u0007"+
+		"\u001b\u0002\u001c\u0007\u001c\u0002\u001d\u0007\u001d\u0001\u0000\u0001"+
+		"\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0005\u0001B\b\u0001\n\u0001"+
+		"\f\u0001E\t\u0001\u0001\u0002\u0001\u0002\u0003\u0002I\b\u0002\u0001\u0003"+
+		"\u0001\u0003\u0001\u0003\u0001\u0003\u0003\u0003O\b\u0003\u0001\u0003"+
+		"\u0001\u0003\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004"+
+		"\u0003\u0004X\b\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0005"+
+		"\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0006"+
+		"\u0001\u0006\u0001\u0007\u0001\u0007\u0001\u0007\u0005\u0007h\b\u0007"+
+		"\n\u0007\f\u0007k\t\u0007\u0001\b\u0001\b\u0001\b\u0001\t\u0001\t\u0005"+
+		"\tr\b\t\n\t\f\tu\t\t\u0001\t\u0001\t\u0001\n\u0001\n\u0001\n\u0001\n\u0001"+
+		"\n\u0001\n\u0001\n\u0001\n\u0003\n\u0081\b\n\u0001\u000b\u0001\u000b\u0001"+
 		"\u000b\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f"+
 		"\u0003\f\u008e\b\f\u0001\r\u0001\r\u0001\r\u0001\r\u0001\r\u0001\r\u0001"+
 		"\u000e\u0001\u000e\u0003\u000e\u0098\b\u000e\u0001\u000e\u0001\u000e\u0001"+

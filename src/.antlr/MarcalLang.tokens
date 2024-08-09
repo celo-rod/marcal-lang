@@ -29,7 +29,6 @@ Str=28
 Delim=29
 WS=30
 Comen=31
-ErrorChar=32
 ','=1
 'FORCA'=2
 'ENERGIA'=3

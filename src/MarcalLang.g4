@@ -172,4 +172,3 @@ fragment Letra: [a-zA-Z];
 fragment Digito: [0-9];
 WS: [ \r\t\n]+ -> skip;
 Comen: '$'.*?'\r'?'\n' -> skip;
-ErrorChar: . ;
