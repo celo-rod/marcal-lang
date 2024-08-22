@@ -16,361 +16,589 @@ public class MarcalLangBaseListener implements MarcalLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram(MarcalLangParser.ProgramContext ctx) { }
+	@Override public void enterProgramNode(MarcalLangParser.ProgramNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram(MarcalLangParser.ProgramContext ctx) { }
+	@Override public void exitProgramNode(MarcalLangParser.ProgramNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclarations(MarcalLangParser.DeclarationsContext ctx) { }
+	@Override public void enterDeclarationsNode(MarcalLangParser.DeclarationsNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclarations(MarcalLangParser.DeclarationsContext ctx) { }
+	@Override public void exitDeclarationsNode(MarcalLangParser.DeclarationsNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclaration(MarcalLangParser.DeclarationContext ctx) { }
+	@Override public void enterVarDeclarationDeclNode(MarcalLangParser.VarDeclarationDeclNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclaration(MarcalLangParser.DeclarationContext ctx) { }
+	@Override public void exitVarDeclarationDeclNode(MarcalLangParser.VarDeclarationDeclNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVarDeclaration(MarcalLangParser.VarDeclarationContext ctx) { }
+	@Override public void enterFunDeclarationDeclNode(MarcalLangParser.FunDeclarationDeclNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVarDeclaration(MarcalLangParser.VarDeclarationContext ctx) { }
+	@Override public void exitFunDeclarationDeclNode(MarcalLangParser.FunDeclarationDeclNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunDeclaration(MarcalLangParser.FunDeclarationContext ctx) { }
+	@Override public void enterVarDeclarationStmtNode(MarcalLangParser.VarDeclarationStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunDeclaration(MarcalLangParser.FunDeclarationContext ctx) { }
+	@Override public void exitVarDeclarationStmtNode(MarcalLangParser.VarDeclarationStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMainFunction(MarcalLangParser.MainFunctionContext ctx) { }
+	@Override public void enterFunDeclarationStmtNode(MarcalLangParser.FunDeclarationStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMainFunction(MarcalLangParser.MainFunctionContext ctx) { }
+	@Override public void exitFunDeclarationStmtNode(MarcalLangParser.FunDeclarationStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTypeSpecifier(MarcalLangParser.TypeSpecifierContext ctx) { }
+	@Override public void enterMainFunctionNode(MarcalLangParser.MainFunctionNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTypeSpecifier(MarcalLangParser.TypeSpecifierContext ctx) { }
+	@Override public void exitMainFunctionNode(MarcalLangParser.MainFunctionNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParams(MarcalLangParser.ParamsContext ctx) { }
+	@Override public void enterForTypeNode(MarcalLangParser.ForTypeNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParams(MarcalLangParser.ParamsContext ctx) { }
+	@Override public void exitForTypeNode(MarcalLangParser.ForTypeNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParam(MarcalLangParser.ParamContext ctx) { }
+	@Override public void enterEneTypeNode(MarcalLangParser.EneTypeNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParam(MarcalLangParser.ParamContext ctx) { }
+	@Override public void exitEneTypeNode(MarcalLangParser.EneTypeNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlock(MarcalLangParser.BlockContext ctx) { }
+	@Override public void enterDecTypeNode(MarcalLangParser.DecTypeNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlock(MarcalLangParser.BlockContext ctx) { }
+	@Override public void exitDecTypeNode(MarcalLangParser.DecTypeNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement(MarcalLangParser.StatementContext ctx) { }
+	@Override public void enterMenTypeNode(MarcalLangParser.MenTypeNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement(MarcalLangParser.StatementContext ctx) { }
+	@Override public void exitMenTypeNode(MarcalLangParser.MenTypeNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressionStatement(MarcalLangParser.ExpressionStatementContext ctx) { }
+	@Override public void enterVazTypeNode(MarcalLangParser.VazTypeNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressionStatement(MarcalLangParser.ExpressionStatementContext ctx) { }
+	@Override public void exitVazTypeNode(MarcalLangParser.VazTypeNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIfStatement(MarcalLangParser.IfStatementContext ctx) { }
+	@Override public void enterParamsNode(MarcalLangParser.ParamsNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIfStatement(MarcalLangParser.IfStatementContext ctx) { }
+	@Override public void exitParamsNode(MarcalLangParser.ParamsNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhileStatement(MarcalLangParser.WhileStatementContext ctx) { }
+	@Override public void enterParamNode(MarcalLangParser.ParamNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhileStatement(MarcalLangParser.WhileStatementContext ctx) { }
+	@Override public void exitParamNode(MarcalLangParser.ParamNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReturnStatement(MarcalLangParser.ReturnStatementContext ctx) { }
+	@Override public void enterBlockNode(MarcalLangParser.BlockNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReturnStatement(MarcalLangParser.ReturnStatementContext ctx) { }
+	@Override public void exitBlockNode(MarcalLangParser.BlockNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInputStatement(MarcalLangParser.InputStatementContext ctx) { }
+	@Override public void enterExpressionStmtNode(MarcalLangParser.ExpressionStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInputStatement(MarcalLangParser.InputStatementContext ctx) { }
+	@Override public void exitExpressionStmtNode(MarcalLangParser.ExpressionStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOutputStatement(MarcalLangParser.OutputStatementContext ctx) { }
+	@Override public void enterIfStmtNode(MarcalLangParser.IfStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOutputStatement(MarcalLangParser.OutputStatementContext ctx) { }
+	@Override public void exitIfStmtNode(MarcalLangParser.IfStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(MarcalLangParser.ExpressionContext ctx) { }
+	@Override public void enterWhileStmtNode(MarcalLangParser.WhileStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(MarcalLangParser.ExpressionContext ctx) { }
+	@Override public void exitWhileStmtNode(MarcalLangParser.WhileStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAssignment(MarcalLangParser.AssignmentContext ctx) { }
+	@Override public void enterReturnStmtNode(MarcalLangParser.ReturnStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAssignment(MarcalLangParser.AssignmentContext ctx) { }
+	@Override public void exitReturnStmtNode(MarcalLangParser.ReturnStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConcatenation(MarcalLangParser.ConcatenationContext ctx) { }
+	@Override public void enterInputStmtNode(MarcalLangParser.InputStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConcatenation(MarcalLangParser.ConcatenationContext ctx) { }
+	@Override public void exitInputStmtNode(MarcalLangParser.InputStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLogicOr(MarcalLangParser.LogicOrContext ctx) { }
+	@Override public void enterOutputStmtNode(MarcalLangParser.OutputStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLogicOr(MarcalLangParser.LogicOrContext ctx) { }
+	@Override public void exitOutputStmtNode(MarcalLangParser.OutputStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLogicAnd(MarcalLangParser.LogicAndContext ctx) { }
+	@Override public void enterVarDeclarationStmtBlockNode(MarcalLangParser.VarDeclarationStmtBlockNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLogicAnd(MarcalLangParser.LogicAndContext ctx) { }
+	@Override public void exitVarDeclarationStmtBlockNode(MarcalLangParser.VarDeclarationStmtBlockNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEquality(MarcalLangParser.EqualityContext ctx) { }
+	@Override public void enterBlockStmtNode(MarcalLangParser.BlockStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEquality(MarcalLangParser.EqualityContext ctx) { }
+	@Override public void exitBlockStmtNode(MarcalLangParser.BlockStmtNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterComparison(MarcalLangParser.ComparisonContext ctx) { }
+	@Override public void enterExpressionStatementNode(MarcalLangParser.ExpressionStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitComparison(MarcalLangParser.ComparisonContext ctx) { }
+	@Override public void exitExpressionStatementNode(MarcalLangParser.ExpressionStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTerm(MarcalLangParser.TermContext ctx) { }
+	@Override public void enterIfStatementNode(MarcalLangParser.IfStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTerm(MarcalLangParser.TermContext ctx) { }
+	@Override public void exitIfStatementNode(MarcalLangParser.IfStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFactor(MarcalLangParser.FactorContext ctx) { }
+	@Override public void enterWhileStatementNode(MarcalLangParser.WhileStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFactor(MarcalLangParser.FactorContext ctx) { }
+	@Override public void exitWhileStatementNode(MarcalLangParser.WhileStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterUnary(MarcalLangParser.UnaryContext ctx) { }
+	@Override public void enterReturnStatementNode(MarcalLangParser.ReturnStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitUnary(MarcalLangParser.UnaryContext ctx) { }
+	@Override public void exitReturnStatementNode(MarcalLangParser.ReturnStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrimary(MarcalLangParser.PrimaryContext ctx) { }
+	@Override public void enterInputStatementNode(MarcalLangParser.InputStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrimary(MarcalLangParser.PrimaryContext ctx) { }
+	@Override public void exitInputStatementNode(MarcalLangParser.InputStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionCall(MarcalLangParser.FunctionCallContext ctx) { }
+	@Override public void enterOutputStatementNode(MarcalLangParser.OutputStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunctionCall(MarcalLangParser.FunctionCallContext ctx) { }
+	@Override public void exitOutputStatementNode(MarcalLangParser.OutputStatementNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArgs(MarcalLangParser.ArgsContext ctx) { }
+	@Override public void enterExpressionNode(MarcalLangParser.ExpressionNodeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArgs(MarcalLangParser.ArgsContext ctx) { }
+	@Override public void exitExpressionNode(MarcalLangParser.ExpressionNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssignmentNode(MarcalLangParser.AssignmentNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssignmentNode(MarcalLangParser.AssignmentNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterConcatenationNode(MarcalLangParser.ConcatenationNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitConcatenationNode(MarcalLangParser.ConcatenationNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterConcatenationExprNode(MarcalLangParser.ConcatenationExprNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitConcatenationExprNode(MarcalLangParser.ConcatenationExprNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLogicOrNode(MarcalLangParser.LogicOrNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLogicOrNode(MarcalLangParser.LogicOrNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLogicAndNode(MarcalLangParser.LogicAndNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLogicAndNode(MarcalLangParser.LogicAndNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterEqualityNode(MarcalLangParser.EqualityNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEqualityNode(MarcalLangParser.EqualityNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterComparisonNode(MarcalLangParser.ComparisonNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitComparisonNode(MarcalLangParser.ComparisonNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTermNode(MarcalLangParser.TermNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTermNode(MarcalLangParser.TermNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFactorNode(MarcalLangParser.FactorNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFactorNode(MarcalLangParser.FactorNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterUnaryNode(MarcalLangParser.UnaryNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUnaryNode(MarcalLangParser.UnaryNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPrimaryNode(MarcalLangParser.PrimaryNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPrimaryNode(MarcalLangParser.PrimaryNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNumINode(MarcalLangParser.NumINodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNumINode(MarcalLangParser.NumINodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNumRNode(MarcalLangParser.NumRNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNumRNode(MarcalLangParser.NumRNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterStrNode(MarcalLangParser.StrNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStrNode(MarcalLangParser.StrNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIdNode(MarcalLangParser.IdNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIdNode(MarcalLangParser.IdNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpressionGroupNode(MarcalLangParser.ExpressionGroupNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpressionGroupNode(MarcalLangParser.ExpressionGroupNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunctionCallNode(MarcalLangParser.FunctionCallNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunctionCallNode(MarcalLangParser.FunctionCallNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunctionCallExprNode(MarcalLangParser.FunctionCallExprNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunctionCallExprNode(MarcalLangParser.FunctionCallExprNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArgsNode(MarcalLangParser.ArgsNodeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArgsNode(MarcalLangParser.ArgsNodeContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

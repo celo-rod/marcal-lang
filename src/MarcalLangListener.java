@@ -7,303 +7,591 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface MarcalLangListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#program}.
+	 * Enter a parse tree produced by the {@code programNode}
+	 * labeled alternative in {@link MarcalLangParser#program}.
 	 * @param ctx the parse tree
 	 */
-	void enterProgram(MarcalLangParser.ProgramContext ctx);
+	void enterProgramNode(MarcalLangParser.ProgramNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#program}.
+	 * Exit a parse tree produced by the {@code programNode}
+	 * labeled alternative in {@link MarcalLangParser#program}.
 	 * @param ctx the parse tree
 	 */
-	void exitProgram(MarcalLangParser.ProgramContext ctx);
+	void exitProgramNode(MarcalLangParser.ProgramNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#declarations}.
+	 * Enter a parse tree produced by the {@code declarationsNode}
+	 * labeled alternative in {@link MarcalLangParser#declarations}.
 	 * @param ctx the parse tree
 	 */
-	void enterDeclarations(MarcalLangParser.DeclarationsContext ctx);
+	void enterDeclarationsNode(MarcalLangParser.DeclarationsNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#declarations}.
+	 * Exit a parse tree produced by the {@code declarationsNode}
+	 * labeled alternative in {@link MarcalLangParser#declarations}.
 	 * @param ctx the parse tree
 	 */
-	void exitDeclarations(MarcalLangParser.DeclarationsContext ctx);
+	void exitDeclarationsNode(MarcalLangParser.DeclarationsNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#declaration}.
+	 * Enter a parse tree produced by the {@code varDeclarationDeclNode}
+	 * labeled alternative in {@link MarcalLangParser#declaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterDeclaration(MarcalLangParser.DeclarationContext ctx);
+	void enterVarDeclarationDeclNode(MarcalLangParser.VarDeclarationDeclNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#declaration}.
+	 * Exit a parse tree produced by the {@code varDeclarationDeclNode}
+	 * labeled alternative in {@link MarcalLangParser#declaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitDeclaration(MarcalLangParser.DeclarationContext ctx);
+	void exitVarDeclarationDeclNode(MarcalLangParser.VarDeclarationDeclNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#varDeclaration}.
+	 * Enter a parse tree produced by the {@code funDeclarationDeclNode}
+	 * labeled alternative in {@link MarcalLangParser#declaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterVarDeclaration(MarcalLangParser.VarDeclarationContext ctx);
+	void enterFunDeclarationDeclNode(MarcalLangParser.FunDeclarationDeclNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#varDeclaration}.
+	 * Exit a parse tree produced by the {@code funDeclarationDeclNode}
+	 * labeled alternative in {@link MarcalLangParser#declaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitVarDeclaration(MarcalLangParser.VarDeclarationContext ctx);
+	void exitFunDeclarationDeclNode(MarcalLangParser.FunDeclarationDeclNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#funDeclaration}.
+	 * Enter a parse tree produced by the {@code varDeclarationStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#varDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunDeclaration(MarcalLangParser.FunDeclarationContext ctx);
+	void enterVarDeclarationStmtNode(MarcalLangParser.VarDeclarationStmtNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#funDeclaration}.
+	 * Exit a parse tree produced by the {@code varDeclarationStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#varDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunDeclaration(MarcalLangParser.FunDeclarationContext ctx);
+	void exitVarDeclarationStmtNode(MarcalLangParser.VarDeclarationStmtNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#mainFunction}.
+	 * Enter a parse tree produced by the {@code funDeclarationStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#funDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterMainFunction(MarcalLangParser.MainFunctionContext ctx);
+	void enterFunDeclarationStmtNode(MarcalLangParser.FunDeclarationStmtNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#mainFunction}.
+	 * Exit a parse tree produced by the {@code funDeclarationStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#funDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitMainFunction(MarcalLangParser.MainFunctionContext ctx);
+	void exitFunDeclarationStmtNode(MarcalLangParser.FunDeclarationStmtNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#typeSpecifier}.
+	 * Enter a parse tree produced by the {@code mainFunctionNode}
+	 * labeled alternative in {@link MarcalLangParser#mainFunction}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeSpecifier(MarcalLangParser.TypeSpecifierContext ctx);
+	void enterMainFunctionNode(MarcalLangParser.MainFunctionNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#typeSpecifier}.
+	 * Exit a parse tree produced by the {@code mainFunctionNode}
+	 * labeled alternative in {@link MarcalLangParser#mainFunction}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeSpecifier(MarcalLangParser.TypeSpecifierContext ctx);
+	void exitMainFunctionNode(MarcalLangParser.MainFunctionNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#params}.
+	 * Enter a parse tree produced by the {@code forTypeNode}
+	 * labeled alternative in {@link MarcalLangParser#typeSpecifier}.
 	 * @param ctx the parse tree
 	 */
-	void enterParams(MarcalLangParser.ParamsContext ctx);
+	void enterForTypeNode(MarcalLangParser.ForTypeNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#params}.
+	 * Exit a parse tree produced by the {@code forTypeNode}
+	 * labeled alternative in {@link MarcalLangParser#typeSpecifier}.
 	 * @param ctx the parse tree
 	 */
-	void exitParams(MarcalLangParser.ParamsContext ctx);
+	void exitForTypeNode(MarcalLangParser.ForTypeNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#param}.
+	 * Enter a parse tree produced by the {@code eneTypeNode}
+	 * labeled alternative in {@link MarcalLangParser#typeSpecifier}.
 	 * @param ctx the parse tree
 	 */
-	void enterParam(MarcalLangParser.ParamContext ctx);
+	void enterEneTypeNode(MarcalLangParser.EneTypeNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#param}.
+	 * Exit a parse tree produced by the {@code eneTypeNode}
+	 * labeled alternative in {@link MarcalLangParser#typeSpecifier}.
 	 * @param ctx the parse tree
 	 */
-	void exitParam(MarcalLangParser.ParamContext ctx);
+	void exitEneTypeNode(MarcalLangParser.EneTypeNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#block}.
+	 * Enter a parse tree produced by the {@code decTypeNode}
+	 * labeled alternative in {@link MarcalLangParser#typeSpecifier}.
 	 * @param ctx the parse tree
 	 */
-	void enterBlock(MarcalLangParser.BlockContext ctx);
+	void enterDecTypeNode(MarcalLangParser.DecTypeNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#block}.
+	 * Exit a parse tree produced by the {@code decTypeNode}
+	 * labeled alternative in {@link MarcalLangParser#typeSpecifier}.
 	 * @param ctx the parse tree
 	 */
-	void exitBlock(MarcalLangParser.BlockContext ctx);
+	void exitDecTypeNode(MarcalLangParser.DecTypeNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#statement}.
+	 * Enter a parse tree produced by the {@code menTypeNode}
+	 * labeled alternative in {@link MarcalLangParser#typeSpecifier}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(MarcalLangParser.StatementContext ctx);
+	void enterMenTypeNode(MarcalLangParser.MenTypeNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#statement}.
+	 * Exit a parse tree produced by the {@code menTypeNode}
+	 * labeled alternative in {@link MarcalLangParser#typeSpecifier}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(MarcalLangParser.StatementContext ctx);
+	void exitMenTypeNode(MarcalLangParser.MenTypeNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#expressionStatement}.
+	 * Enter a parse tree produced by the {@code vazTypeNode}
+	 * labeled alternative in {@link MarcalLangParser#typeSpecifier}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressionStatement(MarcalLangParser.ExpressionStatementContext ctx);
+	void enterVazTypeNode(MarcalLangParser.VazTypeNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#expressionStatement}.
+	 * Exit a parse tree produced by the {@code vazTypeNode}
+	 * labeled alternative in {@link MarcalLangParser#typeSpecifier}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressionStatement(MarcalLangParser.ExpressionStatementContext ctx);
+	void exitVazTypeNode(MarcalLangParser.VazTypeNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#ifStatement}.
+	 * Enter a parse tree produced by the {@code paramsNode}
+	 * labeled alternative in {@link MarcalLangParser#params}.
 	 * @param ctx the parse tree
 	 */
-	void enterIfStatement(MarcalLangParser.IfStatementContext ctx);
+	void enterParamsNode(MarcalLangParser.ParamsNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#ifStatement}.
+	 * Exit a parse tree produced by the {@code paramsNode}
+	 * labeled alternative in {@link MarcalLangParser#params}.
 	 * @param ctx the parse tree
 	 */
-	void exitIfStatement(MarcalLangParser.IfStatementContext ctx);
+	void exitParamsNode(MarcalLangParser.ParamsNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#whileStatement}.
+	 * Enter a parse tree produced by the {@code paramNode}
+	 * labeled alternative in {@link MarcalLangParser#param}.
 	 * @param ctx the parse tree
 	 */
-	void enterWhileStatement(MarcalLangParser.WhileStatementContext ctx);
+	void enterParamNode(MarcalLangParser.ParamNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#whileStatement}.
+	 * Exit a parse tree produced by the {@code paramNode}
+	 * labeled alternative in {@link MarcalLangParser#param}.
 	 * @param ctx the parse tree
 	 */
-	void exitWhileStatement(MarcalLangParser.WhileStatementContext ctx);
+	void exitParamNode(MarcalLangParser.ParamNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#returnStatement}.
+	 * Enter a parse tree produced by the {@code blockNode}
+	 * labeled alternative in {@link MarcalLangParser#block}.
 	 * @param ctx the parse tree
 	 */
-	void enterReturnStatement(MarcalLangParser.ReturnStatementContext ctx);
+	void enterBlockNode(MarcalLangParser.BlockNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#returnStatement}.
+	 * Exit a parse tree produced by the {@code blockNode}
+	 * labeled alternative in {@link MarcalLangParser#block}.
 	 * @param ctx the parse tree
 	 */
-	void exitReturnStatement(MarcalLangParser.ReturnStatementContext ctx);
+	void exitBlockNode(MarcalLangParser.BlockNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#inputStatement}.
+	 * Enter a parse tree produced by the {@code expressionStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterInputStatement(MarcalLangParser.InputStatementContext ctx);
+	void enterExpressionStmtNode(MarcalLangParser.ExpressionStmtNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#inputStatement}.
+	 * Exit a parse tree produced by the {@code expressionStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitInputStatement(MarcalLangParser.InputStatementContext ctx);
+	void exitExpressionStmtNode(MarcalLangParser.ExpressionStmtNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#outputStatement}.
+	 * Enter a parse tree produced by the {@code ifStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterOutputStatement(MarcalLangParser.OutputStatementContext ctx);
+	void enterIfStmtNode(MarcalLangParser.IfStmtNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#outputStatement}.
+	 * Exit a parse tree produced by the {@code ifStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitOutputStatement(MarcalLangParser.OutputStatementContext ctx);
+	void exitIfStmtNode(MarcalLangParser.IfStmtNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#expression}.
+	 * Enter a parse tree produced by the {@code whileStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(MarcalLangParser.ExpressionContext ctx);
+	void enterWhileStmtNode(MarcalLangParser.WhileStmtNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#expression}.
+	 * Exit a parse tree produced by the {@code whileStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(MarcalLangParser.ExpressionContext ctx);
+	void exitWhileStmtNode(MarcalLangParser.WhileStmtNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#assignment}.
+	 * Enter a parse tree produced by the {@code returnStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssignment(MarcalLangParser.AssignmentContext ctx);
+	void enterReturnStmtNode(MarcalLangParser.ReturnStmtNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#assignment}.
+	 * Exit a parse tree produced by the {@code returnStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssignment(MarcalLangParser.AssignmentContext ctx);
+	void exitReturnStmtNode(MarcalLangParser.ReturnStmtNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#concatenation}.
+	 * Enter a parse tree produced by the {@code inputStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterConcatenation(MarcalLangParser.ConcatenationContext ctx);
+	void enterInputStmtNode(MarcalLangParser.InputStmtNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#concatenation}.
+	 * Exit a parse tree produced by the {@code inputStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitConcatenation(MarcalLangParser.ConcatenationContext ctx);
+	void exitInputStmtNode(MarcalLangParser.InputStmtNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#logicOr}.
+	 * Enter a parse tree produced by the {@code outputStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterLogicOr(MarcalLangParser.LogicOrContext ctx);
+	void enterOutputStmtNode(MarcalLangParser.OutputStmtNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#logicOr}.
+	 * Exit a parse tree produced by the {@code outputStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitLogicOr(MarcalLangParser.LogicOrContext ctx);
+	void exitOutputStmtNode(MarcalLangParser.OutputStmtNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#logicAnd}.
+	 * Enter a parse tree produced by the {@code varDeclarationStmtBlockNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterLogicAnd(MarcalLangParser.LogicAndContext ctx);
+	void enterVarDeclarationStmtBlockNode(MarcalLangParser.VarDeclarationStmtBlockNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#logicAnd}.
+	 * Exit a parse tree produced by the {@code varDeclarationStmtBlockNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitLogicAnd(MarcalLangParser.LogicAndContext ctx);
+	void exitVarDeclarationStmtBlockNode(MarcalLangParser.VarDeclarationStmtBlockNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#equality}.
+	 * Enter a parse tree produced by the {@code blockStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterEquality(MarcalLangParser.EqualityContext ctx);
+	void enterBlockStmtNode(MarcalLangParser.BlockStmtNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#equality}.
+	 * Exit a parse tree produced by the {@code blockStmtNode}
+	 * labeled alternative in {@link MarcalLangParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitEquality(MarcalLangParser.EqualityContext ctx);
+	void exitBlockStmtNode(MarcalLangParser.BlockStmtNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#comparison}.
+	 * Enter a parse tree produced by the {@code expressionStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#expressionStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterComparison(MarcalLangParser.ComparisonContext ctx);
+	void enterExpressionStatementNode(MarcalLangParser.ExpressionStatementNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#comparison}.
+	 * Exit a parse tree produced by the {@code expressionStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#expressionStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitComparison(MarcalLangParser.ComparisonContext ctx);
+	void exitExpressionStatementNode(MarcalLangParser.ExpressionStatementNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#term}.
+	 * Enter a parse tree produced by the {@code ifStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#ifStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterTerm(MarcalLangParser.TermContext ctx);
+	void enterIfStatementNode(MarcalLangParser.IfStatementNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#term}.
+	 * Exit a parse tree produced by the {@code ifStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#ifStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitTerm(MarcalLangParser.TermContext ctx);
+	void exitIfStatementNode(MarcalLangParser.IfStatementNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#factor}.
+	 * Enter a parse tree produced by the {@code whileStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#whileStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterFactor(MarcalLangParser.FactorContext ctx);
+	void enterWhileStatementNode(MarcalLangParser.WhileStatementNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#factor}.
+	 * Exit a parse tree produced by the {@code whileStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#whileStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitFactor(MarcalLangParser.FactorContext ctx);
+	void exitWhileStatementNode(MarcalLangParser.WhileStatementNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#unary}.
+	 * Enter a parse tree produced by the {@code returnStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#returnStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterUnary(MarcalLangParser.UnaryContext ctx);
+	void enterReturnStatementNode(MarcalLangParser.ReturnStatementNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#unary}.
+	 * Exit a parse tree produced by the {@code returnStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#returnStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitUnary(MarcalLangParser.UnaryContext ctx);
+	void exitReturnStatementNode(MarcalLangParser.ReturnStatementNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#primary}.
+	 * Enter a parse tree produced by the {@code inputStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#inputStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrimary(MarcalLangParser.PrimaryContext ctx);
+	void enterInputStatementNode(MarcalLangParser.InputStatementNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#primary}.
+	 * Exit a parse tree produced by the {@code inputStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#inputStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrimary(MarcalLangParser.PrimaryContext ctx);
+	void exitInputStatementNode(MarcalLangParser.InputStatementNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#functionCall}.
+	 * Enter a parse tree produced by the {@code outputStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#outputStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionCall(MarcalLangParser.FunctionCallContext ctx);
+	void enterOutputStatementNode(MarcalLangParser.OutputStatementNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#functionCall}.
+	 * Exit a parse tree produced by the {@code outputStatementNode}
+	 * labeled alternative in {@link MarcalLangParser#outputStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionCall(MarcalLangParser.FunctionCallContext ctx);
+	void exitOutputStatementNode(MarcalLangParser.OutputStatementNodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MarcalLangParser#args}.
+	 * Enter a parse tree produced by the {@code expressionNode}
+	 * labeled alternative in {@link MarcalLangParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterArgs(MarcalLangParser.ArgsContext ctx);
+	void enterExpressionNode(MarcalLangParser.ExpressionNodeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MarcalLangParser#args}.
+	 * Exit a parse tree produced by the {@code expressionNode}
+	 * labeled alternative in {@link MarcalLangParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitArgs(MarcalLangParser.ArgsContext ctx);
+	void exitExpressionNode(MarcalLangParser.ExpressionNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code assignmentNode}
+	 * labeled alternative in {@link MarcalLangParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignmentNode(MarcalLangParser.AssignmentNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code assignmentNode}
+	 * labeled alternative in {@link MarcalLangParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignmentNode(MarcalLangParser.AssignmentNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code concatenationNode}
+	 * labeled alternative in {@link MarcalLangParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void enterConcatenationNode(MarcalLangParser.ConcatenationNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code concatenationNode}
+	 * labeled alternative in {@link MarcalLangParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void exitConcatenationNode(MarcalLangParser.ConcatenationNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code concatenationExprNode}
+	 * labeled alternative in {@link MarcalLangParser#concatenation}.
+	 * @param ctx the parse tree
+	 */
+	void enterConcatenationExprNode(MarcalLangParser.ConcatenationExprNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code concatenationExprNode}
+	 * labeled alternative in {@link MarcalLangParser#concatenation}.
+	 * @param ctx the parse tree
+	 */
+	void exitConcatenationExprNode(MarcalLangParser.ConcatenationExprNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code logicOrNode}
+	 * labeled alternative in {@link MarcalLangParser#logicOr}.
+	 * @param ctx the parse tree
+	 */
+	void enterLogicOrNode(MarcalLangParser.LogicOrNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code logicOrNode}
+	 * labeled alternative in {@link MarcalLangParser#logicOr}.
+	 * @param ctx the parse tree
+	 */
+	void exitLogicOrNode(MarcalLangParser.LogicOrNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code logicAndNode}
+	 * labeled alternative in {@link MarcalLangParser#logicAnd}.
+	 * @param ctx the parse tree
+	 */
+	void enterLogicAndNode(MarcalLangParser.LogicAndNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code logicAndNode}
+	 * labeled alternative in {@link MarcalLangParser#logicAnd}.
+	 * @param ctx the parse tree
+	 */
+	void exitLogicAndNode(MarcalLangParser.LogicAndNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code equalityNode}
+	 * labeled alternative in {@link MarcalLangParser#equality}.
+	 * @param ctx the parse tree
+	 */
+	void enterEqualityNode(MarcalLangParser.EqualityNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code equalityNode}
+	 * labeled alternative in {@link MarcalLangParser#equality}.
+	 * @param ctx the parse tree
+	 */
+	void exitEqualityNode(MarcalLangParser.EqualityNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code comparisonNode}
+	 * labeled alternative in {@link MarcalLangParser#comparison}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparisonNode(MarcalLangParser.ComparisonNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code comparisonNode}
+	 * labeled alternative in {@link MarcalLangParser#comparison}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparisonNode(MarcalLangParser.ComparisonNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code termNode}
+	 * labeled alternative in {@link MarcalLangParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void enterTermNode(MarcalLangParser.TermNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code termNode}
+	 * labeled alternative in {@link MarcalLangParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void exitTermNode(MarcalLangParser.TermNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code factorNode}
+	 * labeled alternative in {@link MarcalLangParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterFactorNode(MarcalLangParser.FactorNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code factorNode}
+	 * labeled alternative in {@link MarcalLangParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitFactorNode(MarcalLangParser.FactorNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code unaryNode}
+	 * labeled alternative in {@link MarcalLangParser#unary}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnaryNode(MarcalLangParser.UnaryNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code unaryNode}
+	 * labeled alternative in {@link MarcalLangParser#unary}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnaryNode(MarcalLangParser.UnaryNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code primaryNode}
+	 * labeled alternative in {@link MarcalLangParser#unary}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrimaryNode(MarcalLangParser.PrimaryNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code primaryNode}
+	 * labeled alternative in {@link MarcalLangParser#unary}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrimaryNode(MarcalLangParser.PrimaryNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code numINode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void enterNumINode(MarcalLangParser.NumINodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code numINode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void exitNumINode(MarcalLangParser.NumINodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code numRNode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void enterNumRNode(MarcalLangParser.NumRNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code numRNode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void exitNumRNode(MarcalLangParser.NumRNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code strNode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void enterStrNode(MarcalLangParser.StrNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code strNode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void exitStrNode(MarcalLangParser.StrNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code idNode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void enterIdNode(MarcalLangParser.IdNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code idNode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void exitIdNode(MarcalLangParser.IdNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code expressionGroupNode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressionGroupNode(MarcalLangParser.ExpressionGroupNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code expressionGroupNode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressionGroupNode(MarcalLangParser.ExpressionGroupNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code functionCallNode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunctionCallNode(MarcalLangParser.FunctionCallNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code functionCallNode}
+	 * labeled alternative in {@link MarcalLangParser#primary}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunctionCallNode(MarcalLangParser.FunctionCallNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code functionCallExprNode}
+	 * labeled alternative in {@link MarcalLangParser#functionCall}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunctionCallExprNode(MarcalLangParser.FunctionCallExprNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code functionCallExprNode}
+	 * labeled alternative in {@link MarcalLangParser#functionCall}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunctionCallExprNode(MarcalLangParser.FunctionCallExprNodeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code argsNode}
+	 * labeled alternative in {@link MarcalLangParser#args}.
+	 * @param ctx the parse tree
+	 */
+	void enterArgsNode(MarcalLangParser.ArgsNodeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code argsNode}
+	 * labeled alternative in {@link MarcalLangParser#args}.
+	 * @param ctx the parse tree
+	 */
+	void exitArgsNode(MarcalLangParser.ArgsNodeContext ctx);
 }

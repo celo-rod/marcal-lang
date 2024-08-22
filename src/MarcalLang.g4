@@ -1,142 +1,142 @@
 grammar MarcalLang;
 
 program
-    : declarations mainFunction EOF
+    : declarations mainFunction EOF #programNode
     ;
 
 declarations
-    : declaration*
+    : declaration* #declarationsNode
     ;
 
 declaration
-    : varDeclaration
-    | funDeclaration
+    : varDeclaration #varDeclarationDeclNode
+    | funDeclaration #funDeclarationDeclNode
     ;
 
 varDeclaration
-    : typeSpecifier Id (OpAtr expression)? Delim
+    : typeSpecifier Id (OpAtr expression)? Delim #varDeclarationStmtNode
     ;
 
 funDeclaration
-    : MIS typeSpecifier Id AP params? FP block
+    : MIS typeSpecifier Id AP params? FP block #funDeclarationStmtNode
     ;
 
 mainFunction
-    : MIS DES AP FP block
+    : MIS DES AP FP block #mainFunctionNode
     ;
 
 typeSpecifier
-    : FOR
-    | ENE
-    | DEC
-    | MEN
-    | VAZ
+    : FOR #forTypeNode
+    | ENE #eneTypeNode
+    | DEC #decTypeNode
+    | MEN #menTypeNode
+    | VAZ #vazTypeNode
     ;
 
 params
-    : param (',' param)*
+    : param (',' param)* #paramsNode
     ;
 
 param
-    : typeSpecifier Id
+    : typeSpecifier Id #paramNode
     ;
 
 block
-    : AC statement* FC
+    : AC statement* FC #blockNode
     ;
 
 statement
-    : expressionStatement
-    | ifStatement
-    | whileStatement
-    | returnStatement
-    | inputStatement
-    | outputStatement
-    | varDeclaration
-    | block
+    : expressionStatement #expressionStmtNode
+    | ifStatement #ifStmtNode
+    | whileStatement #whileStmtNode
+    | returnStatement #returnStmtNode
+    | inputStatement #inputStmtNode
+    | outputStatement #outputStmtNode
+    | varDeclaration #varDeclarationStmtBlockNode
+    | block #blockStmtNode
     ;
 
 expressionStatement
-    : expression Delim
+    : expression Delim #expressionStatementNode
     ;
 
 ifStatement
-    : SE AP expression FP AVA statement (REC statement)?
+    : SE AP expression FP AVA statement (REC statement)? #ifStatementNode
     ;
 
 whileStatement
-    : PER AP expression FP statement
+    : PER AP expression FP statement #whileStatementNode
     ;
 
 returnStatement
-    : CON expression? Delim
+    : CON expression? Delim #returnStatementNode
     ;
 
 inputStatement
-    : COM AP Id FP Delim
+    : COM AP Id FP Delim #inputStatementNode
     ;
 
 outputStatement
-    : DRI AP expression (OpCon expression)* FP Delim
+    : DRI AP expression (OpCon expression)* FP Delim #outputStatementNode
     ;
 
 expression
-    : assignment
+    : assignment #expressionNode
     ;
 
 assignment
-    : Id OpAtr assignment
-    | concatenation
+    : Id OpAtr assignment #assignmentNode
+    | concatenation #concatenationNode
     ;
 
 concatenation
-    : logicOr (OpCon logicOr)*
+    : logicOr (OpCon logicOr)* #concatenationExprNode
     ;
 
 logicOr
-    : logicAnd (OpLog logicAnd)*
+    : logicAnd (OpLog logicAnd)* #logicOrNode
     ;
 
 logicAnd
-    : equality (OpLog equality)*
+    : equality (OpLog equality)* #logicAndNode
     ;
 
 equality
-    : comparison (OpRel comparison)*
+    : comparison (OpRel comparison)* #equalityNode
     ;
 
 comparison
-    : term (OpRel term)*
+    : term (OpRel term)* #comparisonNode
     ;
 
 term
-    : factor (OpAri factor)*
+    : factor (OpAri factor)* #termNode
     ;
 
 factor
-    : unary (OpAri unary)*
+    : unary (OpAri unary)* #factorNode
     ;
 
 unary
-    : (OpAri unary)
-    | primary
+    : (OpAri unary) #unaryNode
+    | primary #primaryNode
     ;
 
 primary
-    : NumI
-    | NumR
-    | Str
-    | Id
-    | AP expression FP
-    | functionCall
+    : NumI #numINode
+    | NumR #numRNode
+    | Str #strNode
+    | Id #idNode
+    | AP expression FP #expressionGroupNode
+    | functionCall #functionCallNode
     ;
 
 functionCall
-    : Id AP args? FP
+    : Id AP args? FP #functionCallExprNode
     ;
 
 args
-    : expression (',' expression)*
+    : expression (',' expression)* #argsNode
     ;
 
 FOR: 'FORCA';
