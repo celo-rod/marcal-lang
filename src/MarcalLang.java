@@ -12,9 +12,10 @@ public class MarcalLang {
 
     ParseTree ast = parser.program();
     ParseTreeWalker walker = new ParseTreeWalker();
-    MyListener listener = new MyListener();
-
+    MarcalLangListener listener = new MyListener();
     walker.walk(listener, ast);
+
+    System.out.println(ast.toStringTree(parser));
   }
 
   private static MarcalLangParser getParser(String filename){
@@ -30,4 +31,5 @@ public class MarcalLang {
     }
     return parser;
   }
+  
 }
