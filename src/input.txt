@@ -1,9 +1,9 @@
 MISSAO FORCA fatorial (FORCA numero) {
 	$ comentário
-	SE (n <= 1) AVANCA {
+	SE (numero <= 1) AVANCA {
 		CONCLUI 1?
 	} RECUA {
-		CONCLUI numero * fatorial(n - 1)?
+		CONCLUI numero * fatorial(numero - 1)?
 	}
 }
 
